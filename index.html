@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Adrian Tanase - Cybersecurity Portfolio</title>
+<title>Adrian Tanase | Cybersecurity Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -656,7 +656,7 @@ footer {
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#projects">SOC Labs</a></li>
-    <li><a href="#pcap">PCAP Analysis</a></li>
+    <li><a href="#pcap-analysis">PCAP Analysis</a></li>
     <li><a href="#resume">Resume</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -669,8 +669,8 @@ footer {
       <div class="hero-role-wrap">
         <div class="hero-role-inner">
           <div class="hero-role-line"><span>SOC Analyst</span></div>
-          <div class="hero-role-line"><span>Cybersecurity Analyst</span></div>
-          <div class="hero-role-line"><span>SOC Analyst</span></div>
+<div class="hero-role-line"><span>Threat Detection & Response</span></div>
+<div class="hero-role-line"><span>SIEM & Log Analysis</span></div>
         </div>
       </div>
     </div>
@@ -953,7 +953,7 @@ footer {
 (function(){var c=document.getElementById("stars-canvas"),ctx=c.getContext("2d"),W,H,stars=[],sh=[];function rs(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}function is(){stars=[];for(var i=0;i<300;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.2+.15,a:Math.random()*.6+.15,tw:Math.random()*Math.PI*2,ts:Math.random()*.015+.003,vy:Math.random()*.07+.01})}setInterval(function(){sh.push({x:Math.random()*W*.75,y:Math.random()*H*.45,l:80+Math.random()*120,s:6+Math.random()*6,a:1,g:Math.PI/5})},4000);function draw(){ctx.clearRect(0,0,W,H);var g=ctx.createRadialGradient(W*.2,H*.2,0,W*.2,H*.2,W*.4);g.addColorStop(0,"rgba(255,255,255,.016)");g.addColorStop(1,"transparent");ctx.fillStyle=g;ctx.fillRect(0,0,W,H);for(var i=0;i<stars.length;i++){var s=stars[i];s.tw+=s.ts;s.y-=s.vy;if(s.y<-2)s.y=H+2;var a=s.a*(.6+.4*Math.sin(s.tw));ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle="rgba(220,228,255,"+a+")";ctx.fill()}sh=sh.filter(function(s){return s.a>0});for(var i=0;i<sh.length;i++){var s=sh[i];ctx.save();ctx.globalAlpha=s.a;var gd=ctx.createLinearGradient(s.x,s.y,s.x-Math.cos(s.g)*s.l,s.y-Math.sin(s.g)*s.l);gd.addColorStop(0,"rgba(240,245,255,.85)");gd.addColorStop(1,"transparent");ctx.strokeStyle=gd;ctx.lineWidth=1.4;ctx.beginPath();ctx.moveTo(s.x,s.y);ctx.lineTo(s.x-Math.cos(s.g)*s.l,s.y-Math.sin(s.g)*s.l);ctx.stroke();ctx.restore();s.x+=Math.cos(s.g)*s.s;s.y+=Math.sin(s.g)*s.s;s.a-=.016}requestAnimationFrame(draw)}rs();is();draw();window.addEventListener("resize",function(){rs();is()})})();
 var nav=document.getElementById("navbar");window.addEventListener("scroll",function(){nav.classList.toggle("scrolled",window.scrollY>40)});
 var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.classList.add("visible")})},{threshold:.08});document.querySelectorAll(".reveal").forEach(function(el){obs.observe(el)});
-(function(){var el=document.querySelector(".tw-text");if(!el)return;var txt="Hello, World! ";var i=0;el.textContent="";el.style.borderRight="2px solid rgba(255,255,255,.55)";var bi;function blink(){el.style.borderColor=el.style.borderColor==="transparent"?"rgba(255,255,255,.55)":"transparent"}setTimeout(function type(){if(i<txt.length){el.textContent+=txt[i++];setTimeout(type,80)}else{el.textContent+=String.fromCodePoint(128075);bi=setInterval(blink,530);setTimeout(function(){clearInterval(bi);el.style.borderColor="transparent"},2500)}},600)})();
+(function(){var el=document.querySelector(".tw-text");if(!el)return;var txt="🛡️ From real attacks to real detection.";var i=0;el.textContent="";el.style.borderRight="2px solid rgba(255,255,255,.55)";var bi;function blink(){el.style.borderColor=el.style.borderColor==="transparent"?"rgba(255,255,255,.55)":"transparent"}setTimeout(function type(){if(i<txt.length){el.textContent+=txt[i++];setTimeout(type,80)}else{el.textContent+=String.fromCodePoint(128075);bi=setInterval(blink,530);setTimeout(function(){clearInterval(bi);el.style.borderColor="transparent"},2500)}},600)})();
 </script>
 </body>
 </html>
