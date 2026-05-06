@@ -710,63 +710,110 @@ footer {
       <h2 class="section-title">Projects</h2>
       <div class="section-line"></div>
     </div>
+
+    <!-- PROJECT 1 -->
     <div class="reveal">
       <div class="project-card">
         <div class="project-tag">Home Lab - SIEM - Detection Engineering</div>
         <div class="project-top">
-          <div><div class="project-title">Wazuh Enterprise SIEM Lab - 6-Day SOC Simulation</div></div>
+          <div>
+            <div class="project-title">SSH Brute Force Detection Lab – Splunk SIEM</div>
+          </div>
           <div class="project-links">
-            <a href="https://github.com/ronakmishra28/wazuh-enterprise-siem-lab" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+            <a href="https://github.com/adriantanasse/SOC-Portfolio/tree/main/01-INCIDENT-SOC-ANALYSIS/02-SSH-Brute-Force-Splunk-Detection-and-Repsonse" target="_blank" class="project-link">GitHub</a>
           </div>
         </div>
-        <p class="project-desc">Deployed a 3-machine Wazuh SIEM lab (Ubuntu manager + Windows 11 + Kali Linux agents) and wrote <strong>5 custom detection rules mapped to MITRE ATT&CK</strong> — covering PowerShell obfuscation (T1059.001), download cradles (T1105), Office macro shell spawning (T1566.001), persistence via scheduled tasks (T1136.001), and frequency-based brute force correlation (T1110). Simulated every attack from Kali and validated each rule fired with real alert evidence.<br><br>Ran a full <strong>incident response exercise</strong> — reconstructed a multi-stage attack chain from SIEM alerts, performed agent isolation, eradication, and produced a formal IR report (IR-2026-001). Integrated <strong>VirusTotal API</strong> for automated file hash enrichment and configured <strong>Active Response</strong> for automatic IP blocking on brute force triggers.</p>
+        <p class="project-desc">
+          Built a complete SOC-style detection pipeline to identify and respond to SSH brute-force attacks using <strong>Splunk SIEM</strong>. Simulated attacks with Hydra from Kali Linux, generating real authentication logs on an Ubuntu system.<br><br>
+          Implemented full log ingestion, field extraction, and detection logic using <strong>SPL</strong>, including threshold-based alerting for repeated failed login attempts. Developed dashboards to visualize attack patterns over time and identify top attacking IPs.<br><br>
+          Completed the detection lifecycle with basic incident response by blocking malicious IPs and validating containment effectiveness.
+        </p>
         <div class="project-tags">
-          <span class="ptag">Wazuh 4.14.4</span><span class="ptag">Ubuntu 22.04</span><span class="ptag">Windows 11</span>
-          <span class="ptag">Kali Linux</span><span class="ptag">MITRE ATT&CK</span><span class="ptag">Detection Engineering</span>
-          <span class="ptag">Custom Rules</span><span class="ptag">Incident Response</span><span class="ptag">VirusTotal API</span>
-          <span class="ptag">Active Response</span><span class="ptag">auditd</span><span class="ptag">PowerShell Logging</span>
+          <span class="ptag">Splunk</span><span class="ptag">Ubuntu</span><span class="ptag">Kali Linux</span>
+          <span class="ptag">Hydra</span><span class="ptag">SPL</span><span class="ptag">Log Analysis</span>
+          <span class="ptag">Detection Engineering</span><span class="ptag">Brute Force</span><span class="ptag">Incident Response</span>
         </div>
       </div>
     </div>
 
+    <!-- PROJECT 2 -->
     <div class="reveal" style="margin-top:1.5rem">
       <div class="project-card">
-        <div class="project-tag">Home Lab - WAF - Web Security</div>
+        <div class="project-tag">Home Lab - SIEM - IDS - Automation</div>
         <div class="project-top">
-          <div><div class="project-title">SafeLine WAF - Web Attack Detection and Blocking Lab</div></div>
+          <div>
+            <div class="project-title">SOC Lab – Wazuh SIEM + Suricata IDS with Automated Response</div>
+          </div>
           <div class="project-links">
-            <a href="SafeLine-WAF-Home-Lab-Project.pdf" target="_blank" rel="noopener noreferrer" class="project-link">Read Full Report</a>
-            <a href="https://github.com/ronakmishra28/waf-dvwa-detection-lab" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+            <a href="https://github.com/adriantanasse/SOC-Portfolio/tree/main/01-INCIDENT-SOC-ANALYSIS/01-SSH-Brute-Force-Wazuh-Detection-and-Response" target="_blank" class="project-link">GitHub</a>
           </div>
         </div>
-        <p class="project-desc">Deployed DVWA on Ubuntu and used Kali Linux to execute live <strong>SQL Injection, XSS, and HTTP Flood</strong> attacks — confirmed exploitable without protection. Then placed <strong>SafeLine WAF</strong> (Docker-based reverse proxy) in front of the application and re-ran every attack.<br><br>All attacks blocked. Real-time dashboard logs showed <strong>source IP, matched rule, payload, and timestamp</strong> for each blocked request — the same alert triage workflow SOC analysts run when investigating suspicious web traffic.</p>
+        <p class="project-desc">
+          Designed and deployed a multi-host SOC lab integrating <strong>Wazuh SIEM</strong> and <strong>Suricata IDS</strong> for centralized detection and correlation. Configured log collection across Linux and Windows endpoints and integrated IDS alerts into SIEM workflows.<br><br>
+          Simulated SSH brute-force attacks using Hydra and developed custom correlation rules based on frequency, timeframe, and source IP behavior. Implemented <strong>active response</strong> to automatically block attacker IPs using firewall rules.<br><br>
+          Troubleshot real-world issues including agent communication failures, rule misconfigurations, and response execution errors—mirroring operational SOC environments.
+        </p>
         <div class="project-tags">
-          <span class="ptag">Ubuntu Server</span><span class="ptag">Kali Linux</span><span class="ptag">DVWA</span>
-          <span class="ptag">SafeLine WAF</span><span class="ptag">Docker</span><span class="ptag">SQL Injection</span>
-          <span class="ptag">XSS</span><span class="ptag">HTTP Flood</span><span class="ptag">Wireshark</span>
-          <span class="ptag">OpenSSL</span><span class="ptag">Parallels</span>
+          <span class="ptag">Wazuh</span><span class="ptag">Suricata</span><span class="ptag">Ubuntu</span>
+          <span class="ptag">Windows</span><span class="ptag">Kali Linux</span><span class="ptag">IDS</span>
+          <span class="ptag">SIEM</span><span class="ptag">Active Response</span><span class="ptag">iptables</span>
+          <span class="ptag">Threat Detection</span>
         </div>
       </div>
     </div>
+
+    <!-- PROJECT 3 -->
     <div class="reveal" style="margin-top:1.5rem">
       <div class="project-card">
-        <div class="project-tag">Home Lab - Firewall - Network Defense</div>
+        <div class="project-tag">Home Lab - DoS Detection - Correlation</div>
         <div class="project-top">
-          <div><div class="project-title">pfSense Firewall Home Lab - SYN Flood Attack Simulation and Blocking</div></div>
+          <div>
+            <div class="project-title">DoS Attack Detection & Response – Suricata + Wazuh</div>
+          </div>
           <div class="project-links">
-            <a href="https://github.com/ronakmishra28/pfSense-Firewall-Home-Lab/blob/main/pfSense-Firewall-Home-Lab-Project.pdf" target="_blank" rel="noopener noreferrer" class="project-link">Read Full Report</a>
-            <a href="https://github.com/ronakmishra28/pfSense-Firewall-Home-Lab" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+            <a href="https://github.com/adriantanasse/SOC-Portfolio/tree/main/01-INCIDENT-SOC-ANALYSIS/03-DDoS-Traffic-Flood-Detection-and-Response" target="_blank" class="project-link">GitHub</a>
           </div>
         </div>
-        <p class="project-desc">Built a dual-network lab with <strong>pfSense 2.8.1</strong> as the perimeter firewall — Kali Linux on WAN as the attacker, Ubuntu on LAN as the protected host. Launched a <strong>SYN flood attack via hping3 at ~30,000 packets/sec</strong> and confirmed impact with Wireshark before any rules were in place.<br><br>Created custom WAN firewall rules to block the attacker IP and SYN flood traffic — re-ran the attack and verified <strong>full blocking via pfSense firewall logs</strong>. Covers perimeter defense, DoS mitigation, and the log review cycle that mirrors real SOC triage.</p>
+        <p class="project-desc">
+          Developed a multi-stage detection model to identify HTTP flood (DoS) attacks using <strong>Suricata</strong> and <strong>Wazuh</strong>. Built correlation rules to detect abnormal request rates from a single source, reducing false positives and improving signal accuracy.<br><br>
+          Validated attacks across multiple layers: network traffic (Suricata logs), SIEM correlation alerts, and host-level evidence using system tools. Implemented automated response to block attackers via firewall rules and verified containment effectiveness.<br><br>
+          Focused on end-to-end SOC workflow including detection tuning, investigation, validation, and response automation.
+        </p>
         <div class="project-tags">
-          <span class="ptag">pfSense</span><span class="ptag">VirtualBox</span><span class="ptag">Kali Linux</span>
-          <span class="ptag">Ubuntu</span><span class="ptag">hping3</span><span class="ptag">SYN Flood</span>
-          <span class="ptag">Wireshark</span><span class="ptag">Firewall Rules</span><span class="ptag">DoS Mitigation</span>
-          <span class="ptag">Network Defense</span>
+          <span class="ptag">Suricata</span><span class="ptag">Wazuh</span><span class="ptag">DoS</span>
+          <span class="ptag">Detection Engineering</span><span class="ptag">Correlation Rules</span>
+          <span class="ptag">MITRE T1498</span><span class="ptag">iptables</span>
+          <span class="ptag">Threat Analysis</span>
         </div>
       </div>
     </div>
+
+    <!-- PROJECT 4 -->
+    <div class="reveal" style="margin-top:1.5rem">
+      <div class="project-card">
+        <div class="project-tag">Home Lab - Phishing - Threat Analysis</div>
+        <div class="project-top">
+          <div>
+            <div class="project-title">Phishing Attack Detection Lab – Behavior-Based Analysis</div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/adriantanasse/SOC-Portfolio/tree/main/01-INCIDENT-SOC-ANALYSIS/04-Phishing-Email-Attack" target="_blank" class="project-link">GitHub</a>
+          </div>
+        </div>
+        <p class="project-desc">
+          Simulated a phishing attack using the <strong>Social-Engineer Toolkit (SET)</strong>, including credential harvesting via a spoofed login page. Focused on detecting attacker behavior rather than relying solely on signatures.<br><br>
+          Developed custom Wazuh rules to identify suspicious HTTP activity, credential submission patterns, and abnormal server responses. Integrated <strong>Suricata</strong> for network-level visibility and alert correlation.<br><br>
+          Demonstrates practical SOC investigation workflow including detection, analysis of attacker behavior, and improved visibility into phishing-based threats.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">Wazuh</span><span class="ptag">Suricata</span><span class="ptag">Phishing</span>
+          <span class="ptag">SET Toolkit</span><span class="ptag">Threat Detection</span>
+          <span class="ptag">Behavior Analysis</span><span class="ptag">HTTP Monitoring</span>
+          <span class="ptag">Incident Response</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 <section id="resume">
