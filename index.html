@@ -674,16 +674,18 @@ footer {
         <span class="card-title">soc-monitor.sh</span>
       </div>
       <div class="card-body">
-        <div class="t-line"><span class="tp">ronak@soc</span><span class="tc"> ~ ./monitor --live</span></div>
-        <div class="t-line"><span class="tinfo">[*] Connecting to SIEM...</span></div>
-        <div class="t-line"><span class="tok">[+] Splunk cluster online</span></div>
-        <div class="t-line"><span class="to">[*] Scanning 3,214 events/sec</span></div>
-        <div class="t-line"><span class="talert">[!] ALERT: Brute-force 194.67.x.x</span></div>
-        <div class="t-line"><span class="to">[*] Correlating with threat intel...</span></div>
-        <div class="t-line"><span class="talert">[!] Match: Known C2 infrastructure</span></div>
-        <div class="t-line"><span class="tok">[+] Host isolated SOC-2841 P1</span></div>
-        <div class="t-line"><span class="tp">ronak@soc</span> <span class="tcursor"></span></div>
-      </div>
+  <div class="t-line"><span class="tp">adrian@soc</span><span class="tc"> ~ ./detect --realtime</span></div>
+  <div class="t-line"><span class="tinfo">[*] Initializing log ingestion...</span></div>
+  <div class="t-line"><span class="tok">[+] Data sources connected (auth.log, syslog)</span></div>
+  <div class="t-line"><span class="to">[*] Processing 2,847 events/sec</span></div>
+  <div class="t-line"><span class="talert">[!] ALERT: SSH brute-force detected</span></div>
+  <div class="t-line"><span class="to">[*] Extracting source IP...</span></div>
+  <div class="t-line"><span class="talert">[!] Suspicious IP: 185.234.x.x</span></div>
+  <div class="t-line"><span class="to">[*] Running GeoIP enrichment...</span></div>
+  <div class="t-line"><span class="tok">[+] Origin: Russia (high-risk)</span></div>
+  <div class="t-line"><span class="tok">[+] Action: IP blocked via firewall</span></div>
+  <div class="t-line"><span class="tp">adrian@soc</span> <span class="tcursor"></span></div>
+</div>
     </div>
   </div>
   <div class="scroll-hint"><span>scroll</span><div class="scroll-line"></div></div>
