@@ -132,8 +132,9 @@ section {
 .hero-role-inner {
   display: flex;
   flex-direction: column;
-  animation: roleScroll 4s ease-in-out infinite;
+  animation: roleScroll 6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
+
 .hero-role-line {
   font-family: 'DM Mono', monospace;
   font-size: 0.92rem;
@@ -146,9 +147,10 @@ section {
 }
 .hero-role-line span { color: rgba(255,255,255,0.8); }
 @keyframes roleScroll {
-  0%,35%  { transform: translateY(0); }
-  50%,85% { transform: translateY(-1.8rem); }
-  100%    { transform: translateY(0); }
+  0%, 25%   { transform: translateY(0); }
+  33%, 58%  { transform: translateY(-1.8rem); }
+  66%, 91%  { transform: translateY(-3.6rem); }
+  100%      { transform: translateY(0); }
 }
 
 /* TERMINAL */
