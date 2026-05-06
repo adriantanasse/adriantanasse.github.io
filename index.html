@@ -266,6 +266,11 @@ section {
   border-top: 1px solid var(--border);
   min-height: auto;
 }
+
+#pcap-analysis {
+  border-top: 1px solid var(--border);
+  min-height: auto;
+}
 .project-card {
   border: 1px solid var(--border);
   padding: 2.5rem;
@@ -650,9 +655,10 @@ footer {
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="#projects">SOC Labs</a></li>
+    <li><a href="#pcap">PCAP Analysis</a></li>
     <li><a href="#resume">Resume</a></li>
-    <li><a href="#blogs">Blogs</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 <section id="home">
@@ -674,17 +680,16 @@ footer {
         <span class="card-title">soc-monitor.sh</span>
       </div>
       <div class="card-body">
-  <div class="t-line"><span class="tp">adrian@soc</span><span class="tc"> ~ ./detect --realtime</span></div>
-  <div class="t-line"><span class="tinfo">[*] Initializing log ingestion...</span></div>
-  <div class="t-line"><span class="tok">[+] Data sources connected (auth.log, syslog)</span></div>
-  <div class="t-line"><span class="to">[*] Processing 2,847 events/sec</span></div>
-  <div class="t-line"><span class="talert">[!] ALERT: SSH brute-force detected</span></div>
-  <div class="t-line"><span class="to">[*] Extracting source IP...</span></div>
-  <div class="t-line"><span class="talert">[!] Suspicious IP: 185.234.x.x</span></div>
-  <div class="t-line"><span class="to">[*] Running GeoIP enrichment...</span></div>
-  <div class="t-line"><span class="tok">[+] Origin: Russia (high-risk)</span></div>
-  <div class="t-line"><span class="tok">[+] Action: IP blocked via firewall</span></div>
-  <div class="t-line"><span class="tp">adrian@soc</span> <span class="tcursor"></span></div>
+  <div class="t-line"><span class="tp">adrian@threathunt</span><span class="tc"> ~ ./hunt --deep</span></div>
+  <div class="t-line"><span class="tinfo">[*] Querying historical logs...</span></div>
+  <div class="t-line"><span class="to">[*] Correlating failed login patterns</span></div>
+  <div class="t-line"><span class="talert">[!] Anomaly detected: login spike</span></div>
+  <div class="t-line"><span class="to">[*] Pivoting on source IP...</span></div>
+  <div class="t-line"><span class="talert">[!] Repeated attempts across multiple hosts</span></div>
+  <div class="t-line"><span class="to">[*] Checking threat intelligence feeds...</span></div>
+  <div class="t-line"><span class="tok">[+] Match: Known brute-force actor</span></div>
+  <div class="t-line"><span class="tok">[+] Incident escalated (Severity: High)</span></div>
+  <div class="t-line"><span class="tp">adrian@threathunt</span> <span class="tcursor"></span></div>
 </div>
     </div>
   </div>
@@ -697,10 +702,17 @@ footer {
       <div class="section-line"></div>
     </div>
     <div class="about-body reveal">
-      <p>I fell in love with cybersecurity and I have mastered a solid chunk of it, no question&#8230; &#129335;</p>
-      <p>I am proficient in performing tasks like <strong>log analysis, threat detection and triage, incident handling, network packet dissection, endpoint/user troubleshooting, defensive monitoring,</strong> and <strong>basic containment workflows.</strong></p>
-      <p>My fields of interest are <strong>defensive security operations, SIEM tuning and alerting, network visibility and anomaly detection, endpoint protection,</strong> and <strong>hardening modern infrastructure</strong> (cloud basics, virtualization, identity controls).</p>
-      <p>Whenever possible, I also skill up in platforms like <strong>TryHackMe, Hack The Box,</strong> and <strong>personal Splunk labs</strong> - ingesting real logs, crafting detection searches, building custom dashboards, simulating full incident lifecycles, and running blue-team containment and recovery scenarios.</p>
+      <div class="about-body reveal">
+  <p>My path into cybersecurity didn’t start in a classroom — it started in real-world pressure. While working with clients’ websites and servers, I was repeatedly exposed to attacks: suspicious traffic, login attempts, performance anomalies, and exploitation attempts. I wasn’t just observing threats — I had to deal with them.</p>
+
+  <p>That experience pushed me to go deeper. I became increasingly focused on understanding <strong>how attacks work, how they show up in logs, and how to detect them early</strong>. What started as a necessity quickly turned into a genuine interest in defensive security and protecting systems.</p>
+
+  <p>Today, I focus on building hands-on SOC skills, including <strong>log analysis, threat detection, alert triage, incident investigation, network traffic analysis, and basic containment workflows</strong>. I enjoy working with SIEM platforms, especially <strong>Splunk and Wazuh</strong>, where I simulate real attacks, create detection logic, and analyze security events end-to-end.</p>
+
+  <p>My core interests are in <strong>Security Operations (SOC), detection engineering, SIEM tuning, network visibility, and threat analysis</strong>. I’m particularly interested in understanding attacker behavior and improving detection accuracy through correlation and context.</p>
+
+  <p>I continue to build practical experience through <strong>hands-on labs, real attack simulations, and platforms like TryHackMe and Hack The Box</strong>, always focusing on how detection, analysis, and response come together in real-world environments.</p>
+</div>
     </div>
   </div>
 </section>
@@ -739,7 +751,7 @@ footer {
     <!-- PROJECT 2 -->
     <div class="reveal" style="margin-top:1.5rem">
       <div class="project-card">
-        <div class="project-tag">Home Lab - SIEM - IDS - Automation</div>
+        <div class="project-tag">SOC Lab - SIEM - IDS - Automation</div>
         <div class="project-top">
           <div>
             <div class="project-title">SOC Lab – Wazuh SIEM + Suricata IDS with Automated Response</div>
@@ -765,7 +777,7 @@ footer {
     <!-- PROJECT 3 -->
     <div class="reveal" style="margin-top:1.5rem">
       <div class="project-card">
-        <div class="project-tag">Home Lab - DoS Detection - Correlation</div>
+        <div class="project-tag">SOC Lab - DoS Detection - Correlation</div>
         <div class="project-top">
           <div>
             <div class="project-title">DoS Attack Detection & Response – Suricata + Wazuh</div>
@@ -791,7 +803,7 @@ footer {
     <!-- PROJECT 4 -->
     <div class="reveal" style="margin-top:1.5rem">
       <div class="project-card">
-        <div class="project-tag">Home Lab - Phishing - Threat Analysis</div>
+        <div class="project-tag">SOC Lab - Phishing - Threat Analysis</div>
         <div class="project-top">
           <div>
             <div class="project-title">Phishing Attack Detection Lab – Behavior-Based Analysis</div>
@@ -815,6 +827,97 @@ footer {
     </div>
 
   </div>
+
+<section id="pcap-analysis">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <h2 class="section-title">PCAP Analysis</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- ANALYSIS 1 -->
+    <div class="reveal">
+      <div class="project-card">
+        <div class="project-tag">Malware Analysis - PCAP - Network Forensics</div>
+        <div class="project-top">
+          <div>
+            <div class="project-title">IcedID Malware Infection – PCAP Investigation</div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/adriantanasse/SOC-Portfolio/tree/main/02-MALWARE-PCAP-ANALYSIS/01-IcedID-PCAP-Analysis" target="_blank" class="project-link">GitHub</a>
+          </div>
+        </div>
+        <p class="project-desc">
+          Conducted network forensic analysis on a PCAP file identifying a multi-stage malware infection involving <strong>IcedID (Bokbot)</strong> and <strong>Trickbot</strong>.<br><br>
+          Observed a compromised Windows host downloading malicious payloads disguised as legitimate files over HTTP. Identified suspicious external IP communication and reconstructed infection flow from initial download to command-and-control (C2) activity.<br><br>
+          Detected beaconing behavior and analyzed outbound traffic patterns to confirm active malware communication.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">Wireshark</span><span class="ptag">PCAP Analysis</span>
+          <span class="ptag">IcedID</span><span class="ptag">Trickbot</span>
+          <span class="ptag">C2 Detection</span><span class="ptag">Network Forensics</span>
+          <span class="ptag">HTTP Analysis</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANALYSIS 2 -->
+    <div class="reveal" style="margin-top:1.5rem">
+      <div class="project-card">
+        <div class="project-tag">Malware Analysis - RAT - Threat Investigation</div>
+        <div class="project-top">
+          <div>
+            <div class="project-title">NetSupport RAT Infection – PCAP Analysis</div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/adriantanasse/SOC-Portfolio/tree/main/02-MALWARE-PCAP-ANALYSIS/02-Netsupport-RAT-PCAP-Analysis" target="_blank" class="project-link">GitHub</a>
+            <a href="https://docs.google.com/document/d/1I0wC7qak-zpMqhASKPXZOrxcWFdKVDIdAPdELzTUXPY/edit" target="_blank" class="project-link">Report</a>
+          </div>
+        </div>
+        <p class="project-desc">
+          Investigated a <strong>NetSupport RAT</strong> infection through PCAP analysis, identifying the initial infection vector via a malicious website delivering a fake browser update (SmartApeSG campaign).<br><br>
+          Traced post-infection activity including repeated outbound HTTP POST requests over TCP 443 to a known malicious C2 server. Correlated traffic patterns with known RAT behavior to confirm compromise.<br><br>
+          Documented the full attack chain from initial access to command-and-control communication and produced structured SOC and incident reports.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">Wireshark</span><span class="ptag">NetSupport RAT</span>
+          <span class="ptag">C2 Analysis</span><span class="ptag">Threat Hunting</span>
+          <span class="ptag">HTTP/TLS</span><span class="ptag">Network Traffic Analysis</span>
+          <span class="ptag">Incident Reporting</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANALYSIS 3 -->
+    <div class="reveal" style="margin-top:1.5rem">
+      <div class="project-card">
+        <div class="project-tag">Malware Analysis - Behavioral Detection - PCAP</div>
+        <div class="project-top">
+          <div>
+            <div class="project-title">STRRAT Malware Detection – PCAP Investigation</div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/adriantanasse/SOC-Portfolio/tree/main/02-MALWARE-PCAP-ANALYSIS/03-STRRAT-PCAP-Analysis" target="_blank" class="project-link">GitHub</a>
+            <a href="https://docs.google.com/document/d/1GPR7hvKQ60VQgZtpYtUKSJC76qDClIca9Uws3t8wsYI/edit" target="_blank" class="project-link">Report</a>
+          </div>
+        </div>
+        <p class="project-desc">
+          Performed behavioral analysis of a suspected <strong>STRRAT (Java-based RAT)</strong> infection using PCAP data. Identified abnormal TLS communication patterns including high-frequency small packet transmissions and abrupt TCP resets.<br><br>
+          Detected additional indicators such as unencrypted HTTP requests to geolocation services and lack of normal session termination behavior.<br><br>
+          Confirmed active C2 communication through extracted payload data containing identifiable malware signatures, demonstrating advanced traffic inspection and attacker behavior analysis.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">Wireshark</span><span class="ptag">STRRAT</span>
+          <span class="ptag">TLS Analysis</span><span class="ptag">Behavioral Detection</span>
+          <span class="ptag">C2 Traffic</span><span class="ptag">Network Forensics</span>
+          <span class="ptag">Threat Analysis</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 </section>
 <section id="resume">
   <div class="section-inner">
@@ -825,53 +928,23 @@ footer {
     <div class="resume-clean reveal">
       <p>Want to know more about my experience, education, and certifications? <strong>Download my full resume</strong> - everything is in there.</p>
       <div class="resume-actions">
-        <a href="Ronak_Mishra_Resume.pdf" download class="btn btn-primary">Download Resume</a>
-        <a href="mailto:ronakmishra1077@gmail.com" class="btn btn-outline">Get in Touch</a>
+        <a href="Adrian_Tanase_Resume.pdf" download class="btn btn-primary">Download Resume</a>
+        <a href="mailto:adrian@tancomedia.com" class="btn btn-outline">Get in Touch</a>
       </div>
     </div>
   </div>
 </section>
-<section id="blogs">
-  <div class="section-inner">
-    <div class="section-header reveal">
-      <h2 class="section-title">Blogs</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="blogs-top reveal">
-      <a href="https://medium.com/@ronakonweb" target="_blank" class="medium-link">View all on Medium</a>
-    </div>
-    <div class="blogs-grid">
-      <a href="https://medium.com/@ronakonweb/5-windows-event-ids-every-soc-analyst-should-know-with-real-lab-evidence-9bf8d1f88bca" target="_blank" class="blog-card reveal">
-        <div class="blog-tag">SOC Skills</div>
-        <div class="blog-title">5 Windows Event IDs Every SOC Analyst Should Know - With Real Lab Evidence</div>
-        <div class="blog-excerpt">Real Wazuh alerts, actual Event IDs from a live Windows agent, and exactly what each one means when you see it in a SIEM — no theory, all lab evidence.</div>
-        <div class="blog-meta"><span class="blog-date">Medium - @ronakonweb</span><span class="blog-read">Read</span></div>
-      </a>
-      <a href="https://medium.com/@ronakonweb/deepfakes-and-ai-scams-what-a-beginner-in-cybersecurity-is-seeing-in-2026-8d7948e384cd" target="_blank" class="blog-card reveal" style="transition-delay:.1s">
-        <div class="blog-tag">AI and Threats</div>
-        <div class="blog-title">Deepfakes and AI Scams: What a Beginner in Cybersecurity Is Seeing in 2026</div>
-        <div class="blog-excerpt">What deepfakes and AI-powered scams actually look like from a defender's perspective — and why the security community needs to pay closer attention.</div>
-        <div class="blog-meta"><span class="blog-date">Medium - @ronakonweb</span><span class="blog-read">Read</span></div>
-      </a>
-      <a href="https://medium.com/@ronakonweb/i-built-a-web-security-lab-and-watched-sql-injection-get-blocked-in-real-time-5f3bc8697dd8" target="_blank" class="blog-card reveal" style="transition-delay:.2s">
-        <div class="blog-tag">Home Lab</div>
-        <div class="blog-title">I Built a Web Security Lab and Watched SQL Injection Get Blocked in Real Time</div>
-        <div class="blog-excerpt">Set up DVWA, ran a live SQL injection, deployed SafeLine WAF, and watched the exact same payload get blocked — logs included.</div>
-        <div class="blog-meta"><span class="blog-date">Medium - @ronakonweb</span><span class="blog-read">Read</span></div>
-      </a>
-    </div>
-  </div>
-</section>
+
 <footer>
-  <div class="footer-copy">2026 Developed by <span>Ronak Mishra</span></div>
+  <div class="footer-copy">2026 Developed by <span>Adrian Tanase</span></div>
   <div class="footer-socials">
-    <a href="mailto:ronakmishra1077@gmail.com" title="Email">
+    <a href="mailto:adrian@tancomedia.com" title="Email">
       <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
     </a>
-    <a href="https://www.linkedin.com/in/ronak-mishra-b71a48268/" target="_blank" title="LinkedIn">
+    <a href="https://www.linkedin.com/in/itsadriantan/" target="_blank" title="LinkedIn">
       <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
     </a>
-    <a href="https://github.com/ronakmishra28" target="_blank" title="GitHub">
+    <a href="https://github.com/adriantanasse/SOC-Portfolio/" target="_blank" title="GitHub">
       <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
     </a>
   </div>
