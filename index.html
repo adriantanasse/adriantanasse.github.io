@@ -730,16 +730,21 @@ footer {
 .kali-window-btns {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 14px;
 }
 
 .kwb {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  display: inline-block;
+  color: rgba(255,255,255,0.72);
+  font-size: 0.78rem;
+  font-family: sans-serif;
+  line-height: 1;
+  cursor: default;
+  user-select: none;
+  transition: opacity 0.2s ease;
 }
-
+.kwb:hover {
+  opacity: 0.7;
+}
 .kwb.min {
   background: #f6c177;
 }
@@ -783,16 +788,15 @@ footer {
     <span>File</span>
     <span>Edit</span>
     <span>View</span>
-    <span>Search</span>
     <span>Terminal</span>
-    <span>Help</span>
+ 
   </div>
-  <span class="card-title">adrian@kali: ~</span>
+  <span class="card-title">Terminal — adrian@kali:</span>
   <div class="kali-window-btns">
-    <span class="kwb min"></span>
-    <span class="kwb max"></span>
-    <span class="kwb close"></span>
-  </div>
+  <span class="kwb">—</span>
+  <span class="kwb">□</span>
+  <span class="kwb">✕</span>
+</div>
 </div>
     <div class="card-body">
 
