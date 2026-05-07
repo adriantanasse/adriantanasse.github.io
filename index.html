@@ -650,6 +650,34 @@ footer {
   .section-title { font-size: 1.4rem; }
   .about-body p { font-size: 0.93rem; }
 }
+
+.kali-bar {
+  background: #1a1a1a;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.kali-actions {
+  display: flex;
+  gap: 14px;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.7);
+  font-family: sans-serif;
+}
+
+.kali-actions span {
+  cursor: default;
+}
+
+.card-title {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.75rem;
+  font-family: 'DM Mono', monospace;
+}
 </style>
 <body>
 <canvas id="stars-canvas"></canvas>
@@ -676,13 +704,19 @@ footer {
         </div>
       </div>
     </div>
-    <div class="hero-card">
-      <div class="card-bar">
-        <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
-        <span class="card-title">soc-monitor.sh</span>
-      </div>
+    <div class="card-bar kali-bar">
+  <div class="kali-actions">
+    <span>File</span>
+    <span>Edit</span>
+    <span>View</span>
+    <span>Search</span>
+    <span>Terminal</span>
+    <span>Help</span>
+  </div>
+  <span class="card-title">adrian@kali: ~</span>
+</div>
     <div class="card-body">
-  <div class="t-line"><span class="tp">adrian@ir</span><span class="tc"> ~ ./respond --incident</span></div>
+  <div class="t-line"><span class="tp">adrian@kali</span><span class="tc"> ~ ./respond --incident</span></div>
   <div class="t-line"><span class="tinfo">[*] Incident detected: Unauthorized access attempts</span></div>
   <div class="t-line"><span class="to">[*] Identifying affected host...</span></div>
   <div class="t-line"><span class="talert">[!] Host: ubuntu-server-01</span></div>
@@ -691,7 +725,7 @@ footer {
   <div class="t-line"><span class="to">[*] Containment in progress...</span></div>
   <div class="t-line"><span class="tok">[+] Attacker IP blocked</span></div>
   <div class="t-line"><span class="tok">[+] System secured and monitored</span></div>
-  <div class="t-line"><span class="tp">adrian@ir</span> <span class="tcursor"></span></div>
+  <div class="t-line"><span class="tp">adrian@kali</span> <span class="tcursor"></span></div>
 </div>
     </div>
   </div>
