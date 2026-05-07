@@ -220,6 +220,10 @@ section {
 .tinfo {
   color: #a5b4fc;
 }
+
+.card-body {
+  background: #0d1117;
+}
 .tcursor {
   display: inline-block; width: 7px; height: 13px;
   background: rgba(255,255,255,0.8);
@@ -695,6 +699,58 @@ footer {
   font-size: 0.75rem;
   font-family: 'DM Mono', monospace;
 }
+
+.kali-bar {
+  background: #161b22;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.kali-actions {
+  display: flex;
+  gap: 14px;
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.68);
+  font-family: sans-serif;
+}
+
+.card-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.45);
+  font-family: 'DM Mono', monospace;
+}
+
+.kali-window-btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.kwb {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.kwb.min {
+  background: #f6c177;
+}
+
+.kwb.max {
+  background: #98c379;
+}
+
+.kwb.close {
+  background: #e06c75;
+}
 </style>
 <body>
 <canvas id="stars-canvas"></canvas>
@@ -732,18 +788,64 @@ footer {
     <span>Help</span>
   </div>
   <span class="card-title">adrian@kali: ~</span>
+  <div class="kali-window-btns">
+    <span class="kwb min"></span>
+    <span class="kwb max"></span>
+    <span class="kwb close"></span>
+  </div>
 </div>
     <div class="card-body">
-  <div class="t-line"><span class="tp">adrian@kali</span><span class="tc">:~$ sudo python3 incident_response.py</span></div>
-  <div class="t-line"><span class="tinfo">[*] Incident detected: Unauthorized access attempts</span></div>
-  <div class="t-line"><span class="to">[*] Identifying affected host...</span></div>
-  <div class="t-line"><span class="talert">[!] Host: ubuntu-server-01</span></div>
-  <div class="t-line"><span class="to">[*] Analyzing attack pattern...</span></div>
-  <div class="t-line"><span class="talert">[!] Brute-force attack confirmed</span></div>
-  <div class="t-line"><span class="to">[*] Containment in progress...</span></div>
-  <div class="t-line"><span class="tok">[+] Attacker IP blocked</span></div>
-  <div class="t-line"><span class="tok">[+] System secured and monitored</span></div>
-  <div class="t-line"><span class="tp">adrian@kali</span> <span class="tcursor"></span></div>
+
+  <div class="t-line">
+    <span class="tp">┌──(adrian㉿kali)-[~]</span>
+  </div>
+
+  <div class="t-line">
+    <span class="tp">└─$</span>
+    <span class="tc"> sudo python3 incident_response.py</span>
+  </div>
+
+  <div class="t-line">
+    <span class="tinfo">[*] Incident detected: Unauthorized access attempts</span>
+  </div>
+
+  <div class="t-line">
+    <span class="to">[*] Identifying affected host...</span>
+  </div>
+
+  <div class="t-line">
+    <span class="talert">[!] Host: ubuntu-server-01</span>
+  </div>
+
+  <div class="t-line">
+    <span class="to">[*] Analyzing attack pattern...</span>
+  </div>
+
+  <div class="t-line">
+    <span class="talert">[!] Brute-force attack confirmed</span>
+  </div>
+
+  <div class="t-line">
+    <span class="to">[*] Containment in progress...</span>
+  </div>
+
+  <div class="t-line">
+    <span class="tok">[+] Attacker IP blocked</span>
+  </div>
+
+  <div class="t-line">
+    <span class="tok">[+] System secured and monitored</span>
+  </div>
+
+  <div class="t-line">
+    <span class="tp">┌──(adrian㉿kali)-[~]</span>
+  </div>
+
+  <div class="t-line">
+    <span class="tp">└─$</span>
+    <span class="tcursor"></span>
+  </div>
+
 </div>
     </div>
   </div>
