@@ -546,6 +546,48 @@ footer {
 .footer-socials a:hover { color: #fff; }
 .footer-socials svg { width: 22px; height: 22px; fill: currentColor; }
 
+.footer-certifications {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-certifications img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  filter: grayscale(10%);
+}
+
+.footer-certifications img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .footer-certifications {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-certifications img {
+    height: 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .footer-certifications {
+    gap: 0.7rem;
+  }
+
+  .footer-certifications img {
+    height: 32px;
+  }
+}
 /* ANIMATIONS */
 @keyframes fadeUp  { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
 @keyframes fadeIn  { from{opacity:0} to{opacity:1} }
@@ -773,7 +815,7 @@ footer {
   <div class="hero-inner">
     <div>
       <p class="hero-greeting"><span class="tw-text"></span></p>
-      <h1 class="hero-name">Adrian Tanases</h1>
+      <h1 class="hero-name">Adrian Tanase</h1>
       <div class="hero-role-wrap">
         <div class="hero-role-inner">
           <div class="hero-role-line"><span>SOC Analyst</span></div>
@@ -1098,6 +1140,12 @@ footer {
 
 <footer>
   <div class="footer-copy">2026 Developed by <span>Adrian Tanase</span></div>
+  <div class="footer-certifications">
+    <img src="images/securityplus-logo.png" alt="CompTIA Security+">
+    <img src="images/ceh-logo.jpeg" alt="Pearson Certified Ethical Hacker">
+    <img src="images/cisco.png" alt="Cisco Support and Networking">
+    <img src="images/google-cert.png" alt="Google Certification">
+  </div>
   <div class="footer-socials">
     <a href="mailto:adrian@tancomedia.com" title="Email">
       <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
