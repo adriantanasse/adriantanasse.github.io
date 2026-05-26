@@ -830,6 +830,29 @@ footer {
   box-shadow: 0 0 8px rgba(71,255,147,0.8);
 }
 
+.status-dot-small-eng {
+  width: 6px;
+  height: 6px;
+
+  background: #ffea5f;
+  border-radius: 50%;
+
+  position: relative;
+
+  box-shadow: 0 0 8px rgba(255, 227, 71, 0.8);
+}
+
+.status-dot-small-eng::before {
+  content: "";
+
+  position: absolute;
+  inset: -5px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(71,255,147,0.45);
+
+  animation: pulseSmall 1.8s infinite;
+}
 .status-dot-small::before {
   content: "";
 
@@ -1040,6 +1063,10 @@ footer {
     <!-- PROJECT 1 -->
     <div class="reveal">
       <div class="project-card">
+           <div class="project-status-small">
+  <span class="status-dot-small-eng"></span>
+  <div class="project-tag"></div>LIVE DETECTION</div>
+</div>
         <div class="project-tag">SOC Project - SIEM - Detection Engineering</div>
         <div class="project-top">
           <div>
